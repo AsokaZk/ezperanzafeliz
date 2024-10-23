@@ -39,6 +39,30 @@ function About() {
           </div>
         </div>
       </div>
+          <div className='relative bg-white z-30 flex justify-between p-20'>
+            <div className="video-responsive w-48">
+              <iframe
+                width={'100%'}
+                height='100%'
+                src={`https://www.youtube.com/embed/ZoCdX86fcyk?si=bDcsxISMZYdspEcN`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Embedded youtube"
+              />
+            </div>
+            <div className="video-responsive w-48">
+              <iframe
+              width={'100%'}
+              height='100%'
+                src={`https://www.youtube.com/embed/ZoCdX86fcyk?si=bDcsxISMZYdspEcN`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Embedded youtube"
+              />
+            </div>
+          </div>
     </>
   );
 }

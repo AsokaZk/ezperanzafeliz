@@ -1,4 +1,4 @@
-import Navbar from '../components/navbar/idnex';
+import Navbar from '../components/navbar';
 import AppRouter from '../router';
 
 function App() {
