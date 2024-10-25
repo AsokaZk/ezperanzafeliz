@@ -6,6 +6,8 @@ import Contact from '../pages/contact';
 import { ReactElement } from 'react';
 import Footer from '../components/footer';
 import Choose from '../pages/choose';
+import Information from '../pages/choose/[id]';
+import Payment from '../pages/payment';
 
 function AppRouter(props: { children: ReactElement }) {
   return (
@@ -16,7 +18,9 @@ function AppRouter(props: { children: ReactElement }) {
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/choose" element={<Choose />} />
+          <Route path="/choose/:chooseId" element={<Information />} />
           <Route path="/about" element={<About />} />
+          <Route path="/payment/:id" element={<Payment />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </main>

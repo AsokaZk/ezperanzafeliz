@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 interface CardProps {
   name: string;
   comment: string;
 }
 
-function Card(props:CardProps) {
+function Card(props: CardProps) {
   return (
     <>
       <div className="w-full relative flex items-center justify-center h-auto">
@@ -22,9 +24,12 @@ function Card(props:CardProps) {
               <p className="text-base font-medium text-gray-500 text-center">12/18/2019</p>
             </div>
 
-            <button className="rounded-lg py-2.5 px-6 text-center w-full text-white bg-amber-500/90 font-semibold text-lg transition-all duration-500 hover:bg-indigo-700">
+            <Link
+              to="/choose/1"
+              className="rounded-lg py-2.5 px-6 text-center w-full text-white bg-amber-500/90 font-semibold text-lg transition-all duration-500 hover:bg-indigo-700"
+            >
               Elegir
-            </button>
+            </Link>
           </div>
         </div>
       </div>
