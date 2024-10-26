@@ -1,0 +1,26 @@
+[
+  {
+    "name": "APOYO MÉDICO",
+    "id": 1,
+    "img": "donate-1",
+    "information": "Ayudar a niños enfermos o heridos a recibir atencion medica, asesoramiento y otros cuidados criticos"
+  },
+  {
+    "name": "HORITA FELIZ",
+    "id": 2,
+    "img": "donate-2",
+    "information": "Su donacion potencializara la predicacion del Evangelio a todos los niños de la zona de Calvario - Berenguela a travez de la horita feliz."
+  },
+  {
+    "name": "ALIMENTACION",
+    "id": 3,
+    "img": "donate-3",
+    "information": "Su donacion proporcionara alimentos nutritivos a familias vulnerables"
+  },
+  {
+    "name": "CAMPAMENTOS",
+    "id": 4,
+    "img": "donate-4",
+    "information": "Creemos que los campamentos es una actividad eficaz donde Dios puede llegar al corazon de cada niño, joven y adolescente."
+  }
+]

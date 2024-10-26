@@ -1,12 +1,11 @@
-import Card from '../../components/Card';
+import CardDonate from '../../components/CardDonate';
 
-const donate = [
-  {
-    name: 'APOYO MÉDICO',
-    comment: 'Ayudar a niños enfermos o heridos a recibir atencion medica, asesoramiento y otros cuidados criticos',
-  },
-];
+import data from '../../db/donate.json';
+
 function Donate() {
+  const cards = data.map((item) => {
+    return <CardDonate item={item} key={item.id} />;
+  });
   return (
     <>
       <div className="relative min-h-min items-center flex top-0">
@@ -33,10 +32,7 @@ function Donate() {
             </p>
           </div>
         </div>
-      <div className="flex gap-0 overflow-hidden bg-white">
-        <Card name={donate[0].name} comment={donate[0].comment} />
-        <Card name={donate[0].name} comment={donate[0].comment} />
-      </div>
+        <div className="flex flex-wrap gap-2 justify-around px-3">{cards}</div>
       </div>
     </>
   );

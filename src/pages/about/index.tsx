@@ -17,7 +17,7 @@ function About() {
         </div>
       </div>
 
-      <div className="relative h-96 overflow-hidden bg-white">
+      <div className="relative overflow-hidden w-full h-full bg-white">
         <div className="z-10 text-black text-center w-full content-center justify-center">
           <div className="py-4">
             <h2 className="text-5xl mt-5 font-bold h-auto">Nuestra Misión y Visión</h2>
@@ -26,43 +26,46 @@ function About() {
             <div className="flex flex-col bg-slate-500 bg-opacity-20 px-4 py-4">
               <h5 className="font-bold text-4xl">Visión</h5>
               <p className="text-2xl py-3">
-                "Al 2027 seremos una fundación sostenible con jóvenes formados y comprometidos que impacten la
-                comunidad."
+                "SER UNA IGLESIA DE 2000 MIEMBROS, ESTRUCTURADA CON LIDERAZGO CALIFICADO Y FUNDAMENTO CRISTOCÉNTRICO
+                DESARROLLANDO SERVICIO SOCIAL A LA POBLACION."
               </p>
             </div>
             <div className="flex flex-col bg-slate-500 bg-opacity-20 px-4 py-4">
               <h5 className="font-bold text-2xl">Misión</h5>
               <p className="text-2xl py-3">
-                "Somos una Fundación Cristiana llamada para impulsar el desarrollo integral en niños y jóvenes."
+                "LA IGLESIA EVANGÉLICA PENTECOSTAL NACIONAL DE QUILLACOLLO ESTA PARA SERVIR, EVANGELIZAR NIÑOS, NIÑAS,
+                ADOLESCENTES Y ADULTOS. DISCIPULANDO AL LIDERAZGO Y MIEMBRO GENERAL, INCULCANDO VALORES Y PRINCIPIOS
+                PARA TENER UNA RELACION PERSONAL CON CRISTO."
               </p>
             </div>
           </div>
         </div>
       </div>
-          <div className='relative bg-white z-30 flex justify-between p-20'>
-            <div className="video-responsive w-48">
-              <iframe
-                width={'100%'}
-                height='100%'
-                src={`https://www.youtube.com/embed/ZoCdX86fcyk?si=bDcsxISMZYdspEcN`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded youtube"
-              />
-            </div>
-            <div className="video-responsive w-48">
-              <iframe
-              width={'100%'}
-              height='100%'
-                src={`https://www.youtube.com/embed/ZoCdX86fcyk?si=bDcsxISMZYdspEcN`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded youtube"
-              />
-            </div>
-          </div>
+
+      <div className="relative bg-white z-30 flex justify-between p-20">
+        <div className="video-responsive w-96 h-96">
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1212341040069503&ref=external&mibextid=LoFJqn`}
+            frameBorder="0"
+            allowFullScreen={true}
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Facebook Video"
+          />
+        </div>
+        <div className="video-responsive w-96 h-96">
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1212341040069503&ref=external&mibextid=LoFJqn`}
+            frameBorder="0"
+            allowFullScreen={true}
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            title="Facebook Video"
+          />
+        </div>
+      </div>
     </>
   );
 }

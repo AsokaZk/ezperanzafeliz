@@ -1,7 +1,31 @@
+import { useForm } from 'react-hook-form';
+import dbFirestore from '../../dbconfig';
+import { addDoc, collection } from 'firebase/firestore';
+
 function FormData() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data: any) => {
+    console.log(data);
+    console.log(errors);
+    if (Object.keys(errors).length === 0 && data.name != '') {
+      addDoc(collection(dbFirestore, 'donador'), data)
+        .then((id) => console.log(id, 'se guardo con exito'))
+        .catch((err) => console.log(err, 'error al guardar'));
+      reset();
+      alert('Se registro correctamente');
+    } else {
+      alert('Registro invalido');
+    }
+  };
+
   return (
     <>
-      <form action="" className="">
+      <form onSubmit={handleSubmit(onSubmit)} className="">
         <div className="relative mb-6">
           <label className="flex  items-center mb-2 text-gray-600 text-sm font-medium">Nombre </label>
           <div className="relative  text-gray-500 focus-within:text-gray-900 mb-6">
@@ -24,10 +48,12 @@ function FormData() {
             </div>
             <input
               type="text"
-              id="default-search"
+              {...register('name', { minLength: 3 })}
+              id="name"
               className="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none"
               placeholder="Enter Name"
             />
+            {errors.name && <p>{'Nombre invalido'}</p>}
           </div>
         </div>
         <div className="relative mb-6">
@@ -53,7 +79,8 @@ function FormData() {
             </div>
             <input
               type="text"
-              id="default-search"
+              id="email"
+              {...register('email', { minLength: 3 })}
               className="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none"
               placeholder="Enter Email"
             />
@@ -80,7 +107,8 @@ function FormData() {
             </div>
             <input
               type="text"
-              id="default-search"
+              id="phone"
+              {...register('phone', { minLength: 3 })}
               className="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none"
               placeholder="Enter Phone No"
             />

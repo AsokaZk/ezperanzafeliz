@@ -18,9 +18,10 @@ function AppRouter(props: { children: ReactElement }) {
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/choose" element={<Choose />} />
-          <Route path="/choose/:chooseId" element={<Information />} />
+          <Route path="/choose/:id" element={<Information />} />
           <Route path="/about" element={<About />} />
           <Route path="/payment/:id" element={<Payment />} />
+          <Route path="/payment/donate/:idDonate" element={<Payment />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </main>
