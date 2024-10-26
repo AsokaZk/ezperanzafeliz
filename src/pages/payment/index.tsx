@@ -12,8 +12,8 @@ function Payment() {
   console.log(idDonate, id);
   const data = [
     { option: 'A', monto: '80', montoAnual: '960' },
-    { option: 'B', monto: '90', montoAnual: '960' },
-    { option: 'C', monto: '100', montoAnual: '1860' },
+    { option: 'B', monto: '80', montoAnual: '1920' },
+    { option: 'C', monto: '80', montoAnual: '1860' },
   ];
   return (
     <div className="mt-24 flex flex-col text-center justify-center items-center">
@@ -25,8 +25,8 @@ function Payment() {
             Opcion {data[parseInt(id)].option}: 1 año
           </h4>
           <p>
-            monto a donar por 12 meses: {data[parseInt(id)].monto} Bs <br />
-            monto a donar por un año :{data[parseInt(id)].montoAnual} Bs
+            monto a donar por mes: {data[parseInt(id)].monto} Bs <br />
+            {id != '2' && <> monto a donar por un año :{data[parseInt(id)].montoAnual} Bs </>}
           </p>
         </>
       )}

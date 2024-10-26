@@ -1,4 +1,6 @@
 import imgHome from '../../assets/home.jpeg';
+import child from '../../assets/1. NIÑOS (GRUPAL).jpg';
+import parents from '../../assets/2.PADRES DE FAMILIA (GRUPAL).jpg';
 
 function About() {
   return (
@@ -42,28 +44,52 @@ function About() {
         </div>
       </div>
 
-      <div className="relative bg-white z-30 flex justify-between p-20">
-        <div className="video-responsive w-96 h-96">
-          <iframe
-            width="100%"
-            height="100%"
-            src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1212341040069503&ref=external&mibextid=LoFJqn`}
-            frameBorder="0"
-            allowFullScreen={true}
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            title="Facebook Video"
-          />
+      <div className="relative bg-white z-30 flex flex-col justify-between p-20 gap-4">
+        <div className="flex justify-around">
+          <div className="text-center">
+            <h6 className="text-lg">
+              <strong>Niños</strong>
+            </h6>
+            <img src={child} className="w-96" alt="" />
+            <p className="w-96">
+              Los niños de la Fundación Esperanza Feliz inauguran una celebración, llenando el ambiente de entusiasmo y
+              alegría, mientras sostienen globos de colores en una escena festiva y conmovedora
+            </p>
+          </div>
+          <div className="text-center">
+            <h6 className="text-lg">
+              <strong>Padres de familia</strong>
+            </h6>
+            <img src={parents} className="w-96" alt="" />
+            <p className="w-96">
+              Los padres de familia de los niños de la Fundación Esperanza Feliz concluyen su labor de servicio,
+              demostrando su compromiso y dedicación hacia el bienestar de sus hijos y de la comunidad.
+            </p>
+          </div>
         </div>
-        <div className="video-responsive w-96 h-96">
-          <iframe
-            width="100%"
-            height="100%"
-            src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1212341040069503&ref=external&mibextid=LoFJqn`}
-            frameBorder="0"
-            allowFullScreen={true}
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            title="Facebook Video"
-          />
+        <div className="flex justify-around">
+          <div className="video-responsive w-96 h-96">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/watch/?v=1212341040069503&ref=external&mibextid=LoFJqn`}
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              title="Facebook Video"
+            />
+          </div>
+          <div className="video-responsive w-96 h-96">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100081782161578/videos/1896821180816572`}
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              title="Facebook Video"
+            />
+          </div>
         </div>
       </div>
     </>
